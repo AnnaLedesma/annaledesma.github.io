@@ -1,0 +1,115 @@
+@use "variables";
+
+.portfolio {
+  padding-top: 15vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12vh;
+  max-width: 1200px;
+  width: 90%;
+  margin: auto;
+  h2 {
+    font-size: variables.$sizeTittleSecondary;
+    color: variables.$header;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 15px;
+    font-weight: 500;
+    text-shadow: 2px 2px variables.$color2;
+  }
+}
+
+// carrusel
+
+.carousel__contenedor {
+  position: relative;
+}
+.carousel__anterior,
+.carousel__siguiente {
+  position: absolute;
+  display: block;
+  border: none;
+  top: calc(50% - 35px);
+  cursor: pointer;
+  line-height: 30px;
+  text-align: center;
+  color: variables.$header;
+  font-size: variables.$sizeTittleSecondary;
+  opacity: 20%;
+}
+.carousel__anterior:hover,
+.carousel__siguiente:hover {
+  opacity: 100%;
+}
+.carousel__anterior {
+  left: -30px;
+}
+.carousel__siguiente {
+  right: -30px;
+}
+.carousel__lista {
+  overflow: hidden;
+}
+.carousel__elemento {
+  background-color: variables.$header;
+  margin: 10px;
+  border-radius: 40px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0px 1px 8px variables.$color2;
+  transition: all 400ms ease;
+  &:hover {
+    box-shadow: 5px 5px 10px variables.$color2;
+    transform: translateY(-2%);
+    filter: grayscale(0%);
+  }
+  h3 {
+    font-size: variables.$fontSize;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    padding: 10px;
+  }
+  p {
+    font-size: variables.$textSize;
+    padding: 10px;
+  }
+  .carousel_icons a {
+    color: variables.$fondo1;
+    font-size: variables.$fontSize;
+    margin: 10px;
+    &:hover {
+      color: variables.$color2;
+    }
+  }
+}
+
+.carousel__indicadores .glider-dot {
+  display: block;
+  width: 35px;
+  height: 6px;
+  margin: 30px 10px;
+  background: variables.$header;
+  opacity: .2;
+  border-radius: 0;
+  box-shadow: 0px 1px 8px variables.$color2;
+}
+.carousel__elemento img {
+  width: 100%;
+  height: 30vh;
+  transition: all 400ms ease;
+  filter: grayscale(100%);
+}
+
+.carousel__elemento:hover img {
+  filter: grayscale(0%);
+}
+
+// indicadores
+.carousel__indicadores .glider-dot:hover {
+  opacity: .5;
+}
+
+.carousel__indicadores .glider-dot.active {
+  opacity: 1;
+}

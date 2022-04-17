@@ -1,0 +1,60 @@
+@use "variables";
+
+// Home
+.home {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  .home__contenedor {
+    background-color: variables.$fondoHome;
+    width: 60%;
+    text-align: center;
+    color: variables.$color5;
+    padding: 1em 2em;
+    border: 0.2em solid variables.$color4;
+    box-shadow: 0px 00px 10px 2px variables.$sombras;
+    h1 {
+      font-family: variables.$tipo-principal;
+      font-size: variables.$sizeTitulo;
+      padding: 3rem;
+      letter-spacing: 0.1em;
+    }
+    h2 {
+      font-size: variables.$fontSize;
+      padding: 1rem;
+      letter-spacing: 0.1em;
+      // Efecto typing 
+      #developer {
+        display: inline-block;
+        border-right: 2px solid variables.$color5;
+      }
+    }
+    h3 {
+      font-size: variables.$fontSize;
+      padding: 1.5rem;
+    }
+    .redes {
+      font-size: variables.$fontSize;
+      display: flex;
+      justify-content: center;
+      padding: 3rem 0.5rem;
+      a {
+        padding: 0 1rem;
+        cursor: pointer;
+        transition: all .7s linear 0s;
+      }
+      a:hover {
+        color: variables.$header;
+        transform: rotateY(360deg);
+      }
+    }
+  }
+}
+
+
+
+

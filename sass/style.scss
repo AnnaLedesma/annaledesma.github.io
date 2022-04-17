@@ -1,0 +1,16 @@
+// Generales
+@use "reset";
+@use "variables";
+
+// Módulos
+@use "generales";
+@use "navbar";
+@use "portada";
+@use "about";
+@use "skills";
+@use "porfolio";
+@use "contacto";
+@use "footer";
+
+// responsive
+@use "mediaq";

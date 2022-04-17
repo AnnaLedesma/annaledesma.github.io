@@ -1,0 +1,39 @@
+@use "variables";
+
+.footer {
+  position: relative;
+  left: 0px;
+  bottom: 0px;
+  height: 130px;
+  width: 100%;
+  background-color: variables.$header;
+  box-shadow: 0 0 10px 2px variables.$color1;
+  .footer__scrolling {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 0.1em 0;
+    i {
+      font-size: variables.$sizeTitulo;
+      color: variables.$fondo1;
+      transition: all .5s;
+      &:hover {
+        color: variables.$color2;
+      }
+    }
+  } 
+  p {
+    letter-spacing: 2px;
+    font-family: variables.$tipo-principal;
+    color: variables.$fondo1;
+    text-align: center;
+    margin-top: 10px;
+    padding: 0 1.5em;
+    span {
+      font-family: variables.$tipo-principal;
+      font-style: italic;
+      font-weight: 600;
+    }
+  }
+}
+
+

@@ -1,0 +1,100 @@
+@use "variables";
+
+// Contacto
+
+.contact {
+  height: calc(100vh - 130px);
+  display: grid;
+  place-items: center;
+  gap: 3vh;
+  h2 {
+    margin-top: 50px;
+    font-size: variables.$sizeTittleSecondary;
+    color: variables.$header;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 15px;
+    font-weight: 500;
+    text-shadow: 2px 2px variables.$color2;
+  }
+  .contact__email {
+    width: 350px;
+    height: 50px;
+    padding: 10px;
+    background-color: variables.$header;
+    color: variables.$fondo1;
+    font-size: variables.$fontSize;
+    cursor:pointer;
+    border-radius: 60px;
+    transition: all .5s;
+    box-shadow: 0 0 10px 5px variables.$color1;
+    &:hover {
+      background: variables.$color3;
+      color: variables.$fondo1;
+    }
+  }
+}
+
+
+// iconos
+  .contact__sociales {
+    margin-bottom: 30px;
+    display: flex;
+    .contact__icon {
+    margin: 0 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    span {
+      width: 70px;
+      height: 70px;
+      background: variables.$header;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 70px;
+      font-size: variables.$fontSize;
+      color: variables.$fondo1;
+      box-shadow: 0 0 10px 5px variables.$color1;
+    }
+    .tooltip {
+      position: absolute;
+      top: 0;
+      background: variables.$header;
+      padding: 10px 18px;
+      border-radius: 25px;
+      font-family: variables.$tipo-secundaria;
+      letter-spacing: 2px;
+      font-weight: 500;
+      opacity: 0;
+      transition: all .5s;
+    }
+  }
+}
+  
+  .contact__sociales .contact__icon:hover .tooltip {
+    top: -60px;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  .contact__sociales .contact__icon .tooltip::before {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    background: variables.$header;
+    transform: translateX(-50%) rotate(45deg);
+    transition: all .5s;
+  }
+  
+  .contact__sociales .contact__icon:hover span,
+  .contact__sociales .contact__icon:hover .tooltip,
+  .contact__sociales .contact__icon:hover .tooltip::before {
+    background: variables.$color3;
+    color: variables.$fondo1;
+  }

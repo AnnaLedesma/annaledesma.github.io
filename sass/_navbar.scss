@@ -1,0 +1,58 @@
+@use "variables";
+
+// Nav
+.navbar {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 60px;
+  z-index: 2;
+  display: grid;
+  gap: 40px;
+  align-items: center;
+  background-color: variables.$header;
+  color: variables.$colorFont;
+  font-weight: 500;
+  box-shadow: 0 0 10px 2px variables.$color1;
+  
+  .navbar__moon {
+    color: variables.$fondo1;
+    grid-column: 1/ 2;
+    font-size: variables.$fontSize;
+    margin: 0 40px;
+  }
+  .navbar__ul {
+    grid-column: 7 / 13;
+    display: flex;
+    justify-content: space-around;
+    li {
+      margin: 0 30px;
+      font-size: variables.$textSize;
+      .navbar__a:after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 3px;
+        background: variables.$fondoHome;
+        bottom: 0;
+        transition: all 0.3s;
+      }
+      .navbar__a:hover:after {
+        width: 100%;
+      }
+    }
+  }
+  .navbar__menu {
+    display: none;
+    position: fixed;
+  }
+}
+
+// Responsive
+
+#navbar__menu {
+  display: none;
+}
+
+

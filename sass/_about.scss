@@ -1,0 +1,120 @@
+@use "variables";
+
+//* about
+.about {
+  display: flex;
+  align-items: center;
+  .about__card {
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    padding: 50px;
+    background: variables.$header;
+    border-radius: 15px;
+    box-shadow: 0 0 8px 5px variables.$fondo2;
+    // text
+    font-family: variables.$tipo-secundaria;
+    color: variables.$fondo1;
+    font-size: variables.$textP;
+    font-weight: 500;
+    line-height: 2.2rem;
+    hyphens: none;
+    // grid
+    display: grid;
+    gap: 60px;
+    grid-template-areas: 
+      "img hi" 
+      "img texto";
+    //* imagen
+    .about__img {
+      position: relative;
+      width: 60vh;
+      max-width: 550px;
+      grid-area: img;
+      display: flex;
+      align-items: center;
+      .about__perfil {
+        position: absolute;
+        z-index: 1;
+        border-radius: 15px;
+        box-shadow: 0 0 8px 5px variables.$fondo1;
+        transition: all 0.3s ease-in 0.1s;
+        .hidden {
+          opacity: 0;
+        }
+        &:hover {
+          opacity: 0;
+        }
+      }
+      .about__perfil__secondary {
+        position: absolute;
+        z-index: 0;
+        border-radius: 15px;
+        box-shadow: 0 0 8px 5px variables.$fondo1;
+      }
+    }
+    .about__hi {
+    grid-area: hi;
+    h2 {
+      margin-top: 20px;
+      font-size: variables.$sizeTitulo;
+      .hidden {
+        opacity: 0;
+      }
+    }
+    }
+    .about__text {
+      grid-area: texto;
+      h3 {
+        font-size: variables.$sizeTittleSecondary;
+        margin-bottom: 30px;
+      }
+      h4 {
+        font-size: variables.$textP;
+        font-weight: 500;
+        margin-bottom: 20px;
+        letter-spacing: 1px;
+        line-height: 2rem;
+        span {
+          font-size: variables.$fontSize;
+          font-style: italic;
+          font-weight: 600;
+        }
+      }
+      p{
+        font-family: variables.$tipo-principal;
+        letter-spacing: 1.5px;
+        font-size: variables.$textP;
+      }
+      a {
+        width: 200px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 2px;
+        padding: 10px 20px 10px;
+        border: 1px solid variables.$colorFont;
+        color: variables.$color4;
+        position: relative;
+        background-color: transparent;
+        z-index: 0;
+      }
+      a::after {
+        content: "";
+        z-index: -1;
+        background-color: variables.$fondo1;
+        width: 100%;
+        position: absolute;
+        height: 100%;
+        top: 7px;
+        left: 7px;
+        transition: 0.2s;
+      }
+      a:hover::after {
+        top: 0px;
+        left: 0px;
+      }
+    }
+  }
+}
