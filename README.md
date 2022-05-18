@@ -1,6 +1,6 @@
 # Portfolio
 
-## ¡EY! Soy Anna, desarrolladora frontend junior.
+## ¡EY! Soy Anna, Frontend web developer junior.
 
 ### He realizado mi portfolio para ir añadiendo mis pequeños proyectos personales. 
 

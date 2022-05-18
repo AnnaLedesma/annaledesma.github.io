@@ -55,8 +55,8 @@ window.addEventListener('scroll', animationScrollItems);
 // carousel
 window.addEventListener('load', function(){
 	new Glider(document.querySelector('.carousel__lista'), {
-		slidesToShow: 4,
-		slidesToScroll: 4,
+		slidesToShow: 1,
+		slidesToScroll: 1,
 		dots: '.carousel__indicadores',
 		arrows: {
 			prev: '.carousel__anterior',

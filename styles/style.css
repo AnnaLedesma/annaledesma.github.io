@@ -460,11 +460,6 @@ section {
   letter-spacing: 1px;
   line-height: 2rem;
 }
-.about .about__card .about__text h4 span {
-  font-size: 1.5rem;
-  font-style: italic;
-  font-weight: 600;
-}
 .about .about__card .about__text p {
   font-family: "IBM Plex Serif", serif;
   letter-spacing: 1.5px;
@@ -897,9 +892,6 @@ section {
     letter-spacing: 0.5px !important;
     line-height: 1.6rem !important;
   }
-  .about__card .about__text h4 span {
-    font-size: 1.3rem !important;
-  }
   .about__card .about__text p {
     letter-spacing: 1px !important;
     font-size: 0.9rem !important;
@@ -946,9 +938,6 @@ section {
     letter-spacing: 0.5px !important;
     line-height: 1.6rem !important;
   }
-  .about__card .about__text h4 span {
-    font-size: 1.1rem !important;
-  }
   .about__card .about__text p {
     letter-spacing: 1px !important;
     font-size: 0.8rem !important;
@@ -981,6 +970,11 @@ section {
   }
 }
 @media screen and (max-width: 855px) {
+  section {
+    height: 100% !important;
+    min-width: 100% !important;
+  }
+
   header {
     height: 60px;
     display: flex;
@@ -1016,8 +1010,9 @@ section {
     transform: translateX(0);
   }
   header #navbar__menu {
+    padding-right: 4rem !important;
     position: fixed;
-    z-index: 9999;
+    z-index: 2;
     right: 3%;
     display: flex;
     align-items: center;
@@ -1036,6 +1031,7 @@ section {
   }
 
   .home__contenedor {
+    margin: 30% auto !important;
     width: 90% !important;
   }
   .home__contenedor h1 {
@@ -1046,16 +1042,16 @@ section {
   .about__card {
     display: grid !important;
     width: 90% !important;
-    padding: 30px 20px !important;
+    padding: 15px 10px 30px !important;
     margin: 0 auto !important;
     grid-template-areas: "hi" "img" "texto" !important;
   }
   .about__card .about__img {
     margin-right: auto !important;
     width: 90% !important;
-    max-width: 400px !important;
+    max-width: 350px !important;
     margin: 0 auto;
-    min-height: 400px !important;
+    min-height: 350px !important;
   }
   .about__card .about__img img {
     object-fit: cover !important;
@@ -1065,15 +1061,27 @@ section {
     line-height: 0.1rem !important;
     margin-bottom: 40px !important;
   }
+  .about__card .about__text h3 {
+    font-size: 1.1rem !important;
+  }
+  .about__card .about__text h4 {
+    font-size: 0.65rem;
+    margin-bottom: 5px !important;
+    letter-spacing: 0.5px !important;
+    line-height: 1.6rem !important;
+  }
   .about__card .about__text h3, .about__card .about__text h4, .about__card .about__text p {
     text-align: center !important;
   }
+  .about__card .about__text p {
+    font-size: 0.7rem !important;
+  }
   .about__card .about__text a {
-    margin: 40px auto 0 !important;
+    margin: 20px auto 0 !important;
   }
 
   .section__skills {
-    padding-top: 200px;
+    padding-top: 20%;
   }
   .section__skills .menu__skills {
     gap: 3vh;
@@ -1087,6 +1095,14 @@ section {
     font-weight: 500;
     letter-spacing: 3px;
     font-size: 1.2rem;
+  }
+
+  .carousel {
+    padding: 0 7%;
+  }
+
+  .contact div {
+    margin: 8% 0;
   }
 }
 @media screen and (max-width: 480px) {
@@ -1105,29 +1121,70 @@ section {
   }
 
   .about__card .about__hi h2 {
-    margin-top: 0px !important;
-    margin-bottom: 0px !important;
+    margin: 10px 0 !important;
     font-size: 2.3rem !important;
   }
   .about__card .about__text h3 {
     font-size: 1rem !important;
     margin-bottom: 10px !important;
+    line-height: 1.5rem !important;
   }
   .about__card .about__text h4 {
     font-size: 0.8rem;
     margin-bottom: 10px !important;
     letter-spacing: 0.5px !important;
-    line-height: 1.6rem !important;
+    line-height: 1.5rem !important;
   }
   .about__card .about__text h4 span {
-    font-size: 1.1rem !important;
+    font-size: 1rem !important;
   }
   .about__card .about__text p {
+    line-height: 25px;
     letter-spacing: 1px !important;
     font-size: 0.8rem !important;
   }
   .about__card .about__text a {
     margin-top: 15px !important;
+  }
+
+  .carousel__indicadores {
+    visibility: hidden !important;
+  }
+
+  .contact h2 {
+    padding: 20px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .portfolio {
+    gap: 10vh;
+  }
+
+  .section__skills h2 {
+    font-size: 1.6rem;
+  }
+  .section__skills .menu__card {
+    width: 120px !important;
+    min-width: 120px !important;
+    height: 120px !important;
+  }
+  .section__skills .menu__card h5 {
+    font-weight: 400;
+    letter-spacing: 2px;
+    font-size: 1rem !important;
+  }
+
+  .contact {
+    gap: 2vh;
+  }
+  .contact h2 {
+    padding: 10px;
+  }
+  .contact .contact__email {
+    width: 300px;
+  }
+  .contact .contact__sociales {
+    margin-bottom: 12%;
   }
 }
 

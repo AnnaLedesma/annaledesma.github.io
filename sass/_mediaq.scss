@@ -64,10 +64,6 @@
         margin-bottom: 10px !important;
         letter-spacing: 0.5px !important;
         line-height: 1.6rem !important;
-      
-        span {
-          font-size: calc(variables.$fontSize - 0.2rem) !important;
-        }
       }  
       p {
         letter-spacing: 1px !important;
@@ -133,10 +129,6 @@
         margin-bottom: 10px !important;
         letter-spacing: 0.5px !important;
         line-height: 1.6rem !important;
-  
-        span {
-          font-size: calc(variables.$fontSize - 0.4rem) !important;
-        }
       }
   
       p {
@@ -177,6 +169,14 @@
 }
 
 @media screen and (max-width: 855px) {
+
+  // * Secciones
+  section {
+    height: 100% !important;
+    min-width: 100% !important;
+  }
+
+  //* Navbar
   header {
     height: 60px;
     display: flex;
@@ -213,8 +213,9 @@
       }
     }
     #navbar__menu {
+      padding-right: 4rem !important;
       position: fixed;
-      z-index: 9999;
+      z-index: 2;
       right: 3%;
       display: flex;
       align-items: center;
@@ -235,6 +236,7 @@
 
   // //* home
   .home__contenedor {
+    margin: 30% auto !important;
     width: 90% !important;
     h1 {
       font-size: 2.7rem !important;
@@ -243,45 +245,58 @@
   }
 
   // * about
-    .about__card {
-      display: grid !important;
+  .about__card {
+    display: grid !important;
+    width: 90% !important;
+    padding: 15px 10px 30px !important;
+    margin: 0 auto !important;
+    grid-template-areas:
+      "hi"
+      "img"
+      "texto" !important;
+  
+    .about__img {
+      margin-right: auto !important;
       width: 90% !important;
-      padding: 30px 20px !important;
-      margin: 0 auto !important;
-      grid-template-areas:
-        "hi"
-        "img"
-        "texto" !important;
-    
-      .about__img {
-        margin-right: auto !important;
-        width: 90% !important;
-        max-width: 400px !important;
-        margin: 0 auto;
-        min-height: 400px !important;
-        img {
-          object-fit: cover !important;
-        }
-      }    
-      .about__hi {
-        h2 {
-          text-align: center;
-          line-height: 0.1rem !important;
-          margin-bottom: 40px !important;
-        }
+      max-width: 350px !important;
+      margin: 0 auto;
+      min-height: 350px !important;
+      img {
+        object-fit: cover !important;
       }
-      .about__text {
-        h3, h4, p {
-        text-align: center !important;}
-        a {
-          margin: 40px auto 0 !important;
-        }
+    }    
+    .about__hi {
+      h2 {
+        text-align: center;
+        line-height: 0.1rem !important;
+        margin-bottom: 40px !important;
       }
     }
+    .about__text {
+      h3 {
+        font-size: calc(variables.$fontSize - 0.4rem) !important;
+      }
+      h4 {
+        font-size: calc(variables.$textP - 0.35rem);
+        margin-bottom: 5px !important;
+        letter-spacing: 0.5px !important;
+        line-height: 1.6rem !important;
+      }
+      h3, h4, p {
+      text-align: center !important;
+      }
+      p {
+        font-size: calc(variables.$textP - 0.3rem) !important;
+                          }
+      a {
+        margin: 20px auto 0 !important;
+      }
+    }
+  }
 
 //* skills
 .section__skills {
-  padding-top: 200px;
+  padding-top: 20%;
 
   .menu__skills {
     gap: 3vh;
@@ -293,7 +308,6 @@
       height: 150px;
       .card__tecnology {
         h5 {
-          // ! cambiar
           font-weight: 500;
           letter-spacing: 3px;
           font-size: calc(variables.$fontSize - 0.3rem);
@@ -302,6 +316,16 @@
     }
   }
 }
+
+  .carousel {
+    padding: 0 7%;
+  }
+
+  // * Contact
+
+  .contact div {
+    margin: 8% 0;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -326,8 +350,7 @@
     .about__card {        
       .about__hi {
         h2 {
-          margin-top: 0px !important;
-          margin-bottom: 0px !important;
+          margin: 10px 0 !important;
           font-size: calc(variables.$sizeTitulo - 1.7rem) !important;
         }
       }
@@ -336,20 +359,22 @@
         h3 {
           font-size: calc(variables.$fontSize - 0.5rem) !important;
           margin-bottom: 10px !important;
+          line-height: 1.5rem !important;
         }
     
         h4 {
           font-size: calc(variables.$textP - 0.2rem);
           margin-bottom: 10px !important;
           letter-spacing: 0.5px !important;
-          line-height: 1.6rem !important;
+          line-height: 1.5rem !important;
     
           span {
-            font-size: calc(variables.$fontSize - 0.4rem) !important;
+            font-size: calc(variables.$fontSize - 0.5rem) !important;
           }
         }
     
         p {
+          line-height: 25px;
           letter-spacing: 1px !important;
           font-size: calc(variables.$textP - 0.2rem) !important;
         }
@@ -359,4 +384,53 @@
         }
       }
     }
+
+  //* Portfolio
+  .carousel__indicadores {
+    visibility: hidden !important;
+  }
+
+  //* Contact 
+  .contact h2 {
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+
+  // * Porfolio
+  .portfolio {
+    gap: 10vh;
+  }
+  // * skills
+  .section__skills {
+    h2 {
+      font-size: calc(variables.$sizeTittleSecondary - 0.4rem);
+    }
+    .menu__card {
+        width: 120px !important;
+        min-width: 120px !important;
+        height: 120px !important;
+      h5 {
+          font-weight: 400;
+          letter-spacing: 2px;
+          font-size: calc(variables.$fontSize - 0.5rem) !important;
+        }
+    }
+  }
+
+  //* Contact 
+  .contact { 
+    gap: 2vh;
+    h2 {
+      padding: 10px;
+    }
+    .contact__email {
+      width: 300px;
+    }
+
+    .contact__sociales {
+      margin-bottom: 12%;
+    }
+  }
 }
